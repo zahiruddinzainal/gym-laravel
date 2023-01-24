@@ -132,6 +132,41 @@ class BookingController extends Controller
         return $data;
     }
 
+    public function appGymDate($date)
+    {
+        dd($date);
+        $requestDay = date('d', strtotime($date));
+        $requestMonth = date('m', strtotime($date));
+        $requestYear = date('Y', strtotime($date));
+
+        $bookings = Booking::WhereDay('start_at', $requestDay)->WhereMonth('start_at', $requestMonth)->WhereYear('start_at', $requestYear)->get();
+
+        $data = [];
+        foreach ($bookings as $booking) {
+            $start_at_readable = date('H:i A d/m/Y', strtotime($booking->start_at));
+            $end_at_readable = date('H:i A d/m/Y', strtotime($booking->end_at));
+
+            array_push(
+                $data,
+                [
+                    "id" =>  $booking->id,
+                    "name" =>  User::find($booking->requestor)->username,
+                    "gym_type" => $booking->gym_type,
+                    "username" => User::find($booking->requestor)->username,
+                    "start_at" => $booking->start_at,
+                    "start_at_readable" => $start_at_readable,
+                    "start_hour" => intval(date('H', strtotime($booking->start_at))),
+                    "start_minute" => intval(date('i', strtotime($booking->start_at))),
+                    "end_at" => $booking->end_at,
+                    "end_at_readable" => $end_at_readable,
+                    "end_hour" => intval(date('H', strtotime($booking->end_at))),
+                    "end_minute" => intval(date('i', strtotime($booking->end_at))),
+                ]
+            );
+        }
+        return $data;
+    }
+
     public function appBookGym($gymType, $name, $date, $time)
     {
 

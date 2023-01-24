@@ -25,6 +25,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/gym', [BookingController::class, 'gym']);
 Route::get('/gym/{date}', [BookingController::class, 'gymDate']);
+Route::get('/gym/app/{date}', [BookingController::class, 'appGymDate']);
 Route::get('/gym/{gym}/name/{name}/date/{date}/time/{time}', [BookingController::class, 'appBookGym']);
 
 
