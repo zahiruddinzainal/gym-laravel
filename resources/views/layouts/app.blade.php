@@ -53,7 +53,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top">
         <div class="container d-flex justify-content-between align-items-center">
             <a href="/" class="navbar-brand d-flex align-items-center px-5 px-lg-5">
-                <img style="width: 150px; height: auto;" src="assets/img/uitm_logo.png" alt="Image">
+                <img style="width: 150px; height: auto;" src="/public/assets/img/uitm_logo.png" alt="Image">
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
