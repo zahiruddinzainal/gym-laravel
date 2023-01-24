@@ -45,7 +45,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
+                {{-- <div class="carousel-item">
                     <div class="container">
                         <div class="row p-5">
                             <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
@@ -65,7 +65,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="text-center">
                 <a href="/book" class="btn mb-3" style="background-color: #fab011;">Book now</a>
