@@ -99,6 +99,7 @@ class BookingController extends Controller
 
     public function gymDate($date)
     {
+        dd($date);
         $requestDay = date('d', strtotime($date));
         $requestMonth = date('m', strtotime($date));
         $requestYear = date('Y', strtotime($date));
