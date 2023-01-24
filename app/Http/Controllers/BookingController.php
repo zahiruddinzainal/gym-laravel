@@ -115,7 +115,7 @@ class BookingController extends Controller
                 [
                     "id" =>  $booking->id,
                     "name" =>  User::find($booking->requestor)->username,
-                    "gym" => $booking->gym,
+                    "gym_type" => $booking->gym_type,
                     "username" => User::find($booking->requestor)->username,
                     "start_at" => $booking->start_at,
                     "start_at_readable" => $start_at_readable,
