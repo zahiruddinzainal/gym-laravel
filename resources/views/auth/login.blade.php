@@ -44,8 +44,8 @@
                             </button>
                         </div>
                         <p class="text-center mt-5">
-                            <a href="/register">Create Account</a> |
-                            <a href="/forget-password">Forgot your password?</a>
+                            Dont have account yet? <a href="/register">Create Account</a>
+                            {{-- <a href="/forget-password">Forgot your password?</a> --}}
                         </p>
                     </div>
                 </form>
